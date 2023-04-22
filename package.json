@@ -1,12 +1,16 @@
 {
-  "name": "ngx-monaco-editor-v2",
-  "version": "15.0.1",
+  "name": "ngx-monaco-editor-emmet",
+  "version": "0.0.1",
   "description": "Monaco Code Editor For Angular",
   "keywords": [
     "angular",
     "monaco",
     "monaco-editor-v2",
     "code",
+    "angular-emmet",
+    "monaco-editor emmet",
+    "emmet",
+    "angular code editor",
     "editor",
     "reusable"
   ],
@@ -19,7 +23,7 @@
     "build:prod": "ng build --project=editor-tester --base-href=editor-tester",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-and-deploy-demo": "npm run build:prod && cp dist/editor-tester/index.html dist/editor-tester/200.html && cd dist/editor-tester && surge --domain ngx-monaco-editor-v2.surge.sh",
+    "build-and-deploy-demo": "npm run build:prod && cp dist/editor-tester/index.html dist/editor-tester/200.html && cd dist/editor-tester && surge --domain ngx-monaco-editor-emmet.surge.sh",
     "build-editor": "npm run copy:readme && ng build editor",
     "npm-publish": "npm run build-editor && bash npm-publish",
     "copy:readme": "cp -rf README.md projects/editor/"
