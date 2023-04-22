@@ -1,16 +1,22 @@
-# Monaco Editor Component for Angular 2 and above.
+# Monaco Editor Component for Angular 2 with Emmet integration
 
- - Angular <= 4: v3.x.x
- - Angular 5: v5.x.x
- - Angular 6: v6.x.x
- - Angular 7: v7.x.x
- - Angular 8: v8.x.x
- - Angular 9: v9.x.x
- - Angular 10: v10.x.x 
- - Angular 12: v12.x.x
- - Angular 13: not supported ( best to use 14, otherwise contact author)
- - Angular 14: v14.x.x
- - Angular 15: v15.x.x
+## Emmet limitation
+
+Does NOT support Emmet for embed CSS inside HTML / JSX / TSX
+
+## Angular package versions
+
+- Angular <= 4: v3.x.x
+- Angular 5: v5.x.x
+- Angular 6: v6.x.x
+- Angular 7: v7.x.x
+- Angular 8: v8.x.x
+- Angular 9: v9.x.x
+- Angular 10: v10.x.x
+- Angular 12: v12.x.x
+- Angular 13: not supported ( best to use 14, otherwise contact author)
+- Angular 14: v14.x.x
+- Angular 15: v15.x.x
 
 Using this Module you can utilize the Monaco Editor as an Angular Component. Feel free to contribute, raise feature requests and make it better.
 
