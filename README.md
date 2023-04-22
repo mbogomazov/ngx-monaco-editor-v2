@@ -38,14 +38,14 @@ npm install monaco-editor ngx-monaco-editor-emmet --save
  ```
 
 ### Sample
-Include MonacoEditorModule in Main Module and Feature Modules where you want to use the editor component.(eg: app.module.ts): 
+Include MonacoEditorModule in Main Module and Feature Modules where you want to use the editor component.(eg: app.module.ts):
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { MonacoEditorModule } from 'ngx-monaco-editor-v2';
+import { MonacoEditorModule } from 'ngx-monaco-editor-emmet';
 
 @NgModule({
   declarations: [

@@ -1,7 +1,7 @@
 {
   "name": "ngx-monaco-editor-emmet",
   "version": "0.0.1",
-  "description": "Monaco Code Editor For Angular",
+  "description": "Monaco Code Editor For Angular with Emmet integration",
   "keywords": [
     "angular",
     "monaco",
@@ -31,17 +31,12 @@
   "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/miki995/ngx-monaco-editor-v2.git"
+    "url": "https://github.com/mbogomazov/ngx-monaco-editor-v2"
   },
   "bugs": {
-    "url": "https://github.com/miki995/ngx-monaco-editor-v2/issues"
+    "url": "https://github.com/mbogomazov/ngx-monaco-editor-v2/issues"
   },
-  "author": "Miroslav Maksimovic",
-  "contributors": [
-    "Atul Kumar <atulaggarwal4288@gmail.com>",
-    "Miroslav Maksimovic <miroslavmaksimovic95@gmail.com>",
-    "Thomas-Louis Simard <thomas.louis.simard@gmail.com>"
-  ],
+  "author": "Mikhail Bogomazov",
   "dependencies": {
     "@angular/animations": ">=15.0.0",
     "@angular/common": ">=15.0.0",
