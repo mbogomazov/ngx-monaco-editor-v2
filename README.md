@@ -1,16 +1,22 @@
-# Monaco Editor Component for Angular 2 and above.
+# Monaco Editor Component for Angular 2 with Emmet integration
 
- - Angular <= 4: v3.x.x
- - Angular 5: v5.x.x
- - Angular 6: v6.x.x
- - Angular 7: v7.x.x
- - Angular 8: v8.x.x
- - Angular 9: v9.x.x
- - Angular 10: v10.x.x 
- - Angular 12: v12.x.x
- - Angular 13: not supported ( best to use 14, otherwise contact author)
- - Angular 14: v14.x.x
- - Angular 15: v15.x.x
+## Emmet limitation
+
+Does NOT support Emmet for embed CSS inside HTML / JSX / TSX
+
+## Angular package versions
+
+- Angular <= 4: v3.x.x
+- Angular 5: v5.x.x
+- Angular 6: v6.x.x
+- Angular 7: v7.x.x
+- Angular 8: v8.x.x
+- Angular 9: v9.x.x
+- Angular 10: v10.x.x
+- Angular 12: v12.x.x
+- Angular 13: not supported ( best to use 14, otherwise contact author)
+- Angular 14: v14.x.x
+- Angular 15: v15.x.x
 
 Using this Module you can utilize the Monaco Editor as an Angular Component. Feel free to contribute, raise feature requests and make it better.
 
@@ -18,7 +24,7 @@ Supports all the options available in monaco-editor [Monaco Editor Options](http
 
 ## Demo
 
-https://ngx-monaco-editor-v2.surge.sh/
+https://ngx-monaco-editor-emmet.surge.sh/
 
 ![img.png](img.png)
 
@@ -28,58 +34,18 @@ https://ngx-monaco-editor-v2.surge.sh/
 
 Install from npm repository:
 ```
-npm install monaco-editor ngx-monaco-editor-v2 --save
- ```
-
-Breaking change from v10, is to use monaco-editor next to ngx-monaco-editor-v2 in your package.json file.
- 
-For angular version 6 use v6.x.x
-```
-npm install ngx-monaco-editor-v2@6.0.0 --save
- ```
-
-Add the glob to assets in `angular.json`
-```typescript
-{
-  "apps": [
-    {
-      "assets": [
-      { "glob": "**/*", "input": "node_modules/monaco-editor", "output": "/assets/monaco/" }
-      ],
-      ...
-    }
-    ...
-  ],
-  ...
-}
- ```
-
-
-For Angular 6 and below, add the glob to assets in `.angular-cli.json` schema - `projects.[project-name].architect.build` (to make monaco-editor lib available to the app):
-```typescript
-{
-  "options":{
-        {"assets": [
-          { "glob": "**/*", "input": "node_modules/ngx-monaco-editor/assets/monaco", "output": "./assets/monaco/" }
-
-        ],
-        ...
-        }
-    ...
-    },
-  ...
-}
+npm install monaco-editor ngx-monaco-editor-emmet --save
  ```
 
 ### Sample
-Include MonacoEditorModule in Main Module and Feature Modules where you want to use the editor component.(eg: app.module.ts): 
+Include MonacoEditorModule in Main Module and Feature Modules where you want to use the editor component.(eg: app.module.ts):
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { MonacoEditorModule } from 'ngx-monaco-editor-v2';
+import { MonacoEditorModule } from 'ngx-monaco-editor-emmet';
 
 @NgModule({
   declarations: [
@@ -106,7 +72,7 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  editorOptions = {theme: 'vs-dark', language: 'javascript'};
+  editorOptions = {theme: 'vs-dark', language: 'javascript', useEmmet: true};
   code: string= 'function x() {\nconsole.log("Hello world!");\n}';
 }
 ```
@@ -165,14 +131,14 @@ Add styling in css/scss file:
 Set automaticLayout option to adjust editor size dynamically. Recommended when using in modal dialog or tabs where editor is not visible initially.
 
 ### Events
-Output event (onInit) expose editor instance that can be used for performing custom operations on the editor. 
+Output event (onInit) expose editor instance that can be used for performing custom operations on the editor.
 ```html
 <ngx-monaco-editor [options]="editorOptions" [(ngModel)]="code" (onInit)="onInit($event)"></ngx-monaco-editor>
 ```
 
 ```typescript
 export class AppComponent {
-  editorOptions = {theme: 'vs-dark', language: 'javascript'};
+  editorOptions = {theme: 'vs-dark', language: 'javascript', useEmmet: true};
   code: string= 'function x() {\nconsole.log("Hello world!");\n}';
   onInit(editor) {
       let line = editor.getPosition();
@@ -293,7 +259,7 @@ export class AppComponent {
   options = {
     theme: 'vs-dark'
   };
-  
+
   jsonCode = [
     '{',
     '    "p1": "v3",',
@@ -315,4 +281,4 @@ export class AppComponent {
 
 ## License
 
-MIT © [Miroslav Maksimovic](https://github.com/miki995)
+MIT © [Mikhail Bogomazov](https://github.com/mbogomazov)

@@ -1,12 +1,16 @@
 {
-  "name": "ngx-monaco-editor-v2",
-  "version": "15.0.1",
-  "description": "Monaco Code Editor For Angular",
+  "name": "ngx-monaco-editor-emmet",
+  "version": "0.0.1",
+  "description": "Monaco Code Editor For Angular with Emmet integration",
   "keywords": [
     "angular",
     "monaco",
     "monaco-editor-v2",
     "code",
+    "angular-emmet",
+    "monaco-editor emmet",
+    "emmet",
+    "angular code editor",
     "editor",
     "reusable"
   ],
@@ -19,7 +23,7 @@
     "build:prod": "ng build --project=editor-tester --base-href=editor-tester",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-and-deploy-demo": "npm run build:prod && cp dist/editor-tester/index.html dist/editor-tester/200.html && cd dist/editor-tester && surge --domain ngx-monaco-editor-v2.surge.sh",
+    "build-and-deploy-demo": "npm run build:prod && cp dist/editor-tester/index.html dist/editor-tester/200.html && cd dist/editor-tester && surge --domain ngx-monaco-editor-emmet.surge.sh",
     "build-editor": "npm run copy:readme && ng build editor",
     "npm-publish": "npm run build-editor && bash npm-publish",
     "copy:readme": "cp -rf README.md projects/editor/"
@@ -27,17 +31,12 @@
   "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/miki995/ngx-monaco-editor-v2.git"
+    "url": "https://github.com/mbogomazov/ngx-monaco-editor-v2"
   },
   "bugs": {
-    "url": "https://github.com/miki995/ngx-monaco-editor-v2/issues"
+    "url": "https://github.com/mbogomazov/ngx-monaco-editor-v2/issues"
   },
-  "author": "Miroslav Maksimovic",
-  "contributors": [
-    "Atul Kumar <atulaggarwal4288@gmail.com>",
-    "Miroslav Maksimovic <miroslavmaksimovic95@gmail.com>",
-    "Thomas-Louis Simard <thomas.louis.simard@gmail.com>"
-  ],
+  "author": "Mikhail Bogomazov",
   "dependencies": {
     "@angular/animations": ">=15.0.0",
     "@angular/common": ">=15.0.0",
